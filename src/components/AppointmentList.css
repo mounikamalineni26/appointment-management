@@ -1,0 +1,55 @@
+.list-container {
+  background: #ffffff;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 8px;
+  width: 500px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.list-container h2 {
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Add some margin between action buttons */
+button {
+  padding: 5px 10px;
+  margin-right: 8px; /* space between buttons */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Optional: different colors for Edit and Delete */
+button:first-child {
+  background-color: #4CAF50; /* Edit - green */
+  color: white;
+}
+
+button:last-child {
+  background-color: #f44336; /* Delete - red */
+  color: white;
+}
+
