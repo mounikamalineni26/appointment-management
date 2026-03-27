@@ -1,55 +1,138 @@
+/* Container */
 .list-container {
   background: #ffffff;
   padding: 20px;
-  margin: 20px auto;
-  border-radius: 8px;
-  width: 500px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin: 30px auto;
+  margin-top: 40px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 500px; /* 🔥 responsive width */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+/* Title */
 .list-container h2 {
   color: #333;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   text-align: center;
 }
 
+/* Total count */
+.list-container p {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+}
+
+/* Table */
 table {
   width: 100%;
   border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 8px;
 }
 
+/* Table cells */
 th, td {
   border: 1px solid #ddd;
-  padding: 10px;
+  padding: 12px;
   text-align: center;
 }
 
+/* Header */
 th {
   background-color: #007bff;
   color: white;
-}
-
-tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-/* Add some margin between action buttons */
-button {
-  padding: 5px 10px;
-  margin-right: 8px; /* space between buttons */
+  font-weight: 600;
   border: none;
-  border-radius: 4px;
+
+}
+
+/* Zebra rows */
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Hover effect 🔥 */
+tr:hover {
+  background-color: #eef5ff;
+}
+
+/* Buttons */
+button {
+  padding: 6px 12px;
+  margin: 4px;
+  border: none;
+  border-radius: 6px;
   cursor: pointer;
+  transition: 0.2s;
 }
 
-/* Optional: different colors for Edit and Delete */
+/* Edit button */
 button:first-child {
-  background-color: #4CAF50; /* Edit - green */
+  background-color: #28a745;
   color: white;
 }
 
+button:first-child:hover {
+  background-color: #218838;
+}
+
+/* Delete button */
 button:last-child {
-  background-color: #f44336; /* Delete - red */
+  background-color: #dc3545;
   color: white;
 }
 
+button:last-child:hover {
+  background-color: #c82333;
+}
+
+/* Empty state */
+.empty {
+  text-align: center;
+  color: gray;
+  margin-top: 15px;
+}
+
+/* 🔥 Responsive Design */
+@media (max-width: 600px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead {
+    display: none; /* hide table header */
+  }
+
+  tr {
+    margin-bottom: 15px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+
+  td {
+    border: none;
+    text-align: left;
+    padding: 8px;
+    position: relative;
+  }
+
+  td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: block;
+    color: #555;
+  }
+
+  button {
+    width: 100%;
+  }
+}

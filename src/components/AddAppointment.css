@@ -1,49 +1,151 @@
+/* Container */
+.container {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Form Card */
 .add-form {
+  max-width: 500px;
   background: #ffffff;
   padding: 20px;
   margin: 20px auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
 }
 
+/* Title */
 .add-form h2 {
   color: #333;
   margin-bottom: 15px;
   text-align: center;
 }
 
+/* Form layout */
 .add-form form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 }
 
+/* Inputs */
 .add-form input {
-  padding: 8px;
+  padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  transition: border-color 0.2s, box-shadow 0.2s;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: 0.2s;
 }
 
 .add-form input:focus {
   border-color: #007bff;
   outline: none;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.4);
 }
 
-/* Add/Update button */
+/* Button */
 .add-btn {
   background-color: #007bff !important;
   color: white;
-  padding: 8px;
-  border-radius: 5px;
+  padding: 10px;
+  border-radius: 6px;
   border: none;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  max-width: 200px;
+  margin: 10px auto 0;
+  display: block;
+  transition: 0.3s;
 }
 
 .add-btn:hover {
   background-color: #0056b3;
+  transform: scale(1.02);
 }
+
+/* Appointment Cards */
+.card {
+  background: #fff;
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  margin: 0;
+}
+
+.card p {
+  margin: 5px 0;
+  color: #555;
+}
+
+/* Buttons */
+.card button {
+  margin-right: 8px;
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.card button:first-of-type {
+  background: #28a745;
+  color: white;
+}
+
+.card button:last-of-type {
+  background: #dc3545;
+  color: white;
+}
+
+/* Today Badge */
+.badge {
+  display: inline-block;
+  background: #28a745;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Search bar */
+.search {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Empty state */
+.empty {
+  text-align: center;
+  color: #777;
+  margin-top: 20px;
+}
+
+/* 🔥 Responsive Design */
+@media (max-width: 600px) {
+  .add-form {
+    padding: 15px;
+  }
+
+  .card {
+    padding: 12px;
+  }
+
+  .card button {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
+body {
+  background: #f4f6f9;
+  font-family: Arial, sans-serif;
+} 
